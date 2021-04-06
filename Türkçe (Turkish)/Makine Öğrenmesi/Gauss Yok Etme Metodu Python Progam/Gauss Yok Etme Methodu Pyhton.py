@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Gerekli kütüphanelerin iport edilmesi.
+# Gerekli kütüphanelerin import edilmesi.
 import numpy as np
 import sys
 
@@ -49,6 +49,6 @@ for i in range(n-2,-1,-1):
     x[i] = x[i]/a[i][i]
 
 # Sonuçları ekrana yazdırma
-print('\nRequired solution is: ')
+print('\nBulunan Cevap: ')
 for i in range(n):
     print('X%d = %0.2f' %(i,x[i]), end = '\t')

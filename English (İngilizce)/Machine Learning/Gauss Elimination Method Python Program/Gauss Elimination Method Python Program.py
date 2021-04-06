@@ -1,34 +1,34 @@
 # -*- coding: utf-8 -*-
 
-# Gerekli kütüphanelerin iport edilmesi.
+# importing necessary libraries.
 import numpy as np
 import sys
 
-# Bilinmeyen sayısının okunması
-n = int(input('Bilinmeyen Sayısını Giriniz: '))
+# Reading number of unknowns.
+n = int(input('Please Enter number of unknowns: '))
 
-# Matrisi yerleştirmek için n e n+1 olacak şekilde
-# 2 boyutlu bir nunpy dizisi oluşturup 0 ile dolduruyoruz.
+# Making numpy array of n x n+1 size and initializing 
+# to zero for storing augmented matrix.
 a = np.zeros((n,n+1))
 
-# Çözümleri tutmak için n boyutunda tek boyutlu bir
-# nunpy dizisi oluşturuyoruz ve 0 ile dolduruyoruz.
+# Making numpy array of n size and initializing 
+# to zero for storing solution vector
 x = np.zeros(n)
 
-# Arttırılmış Katsayılar Matrisinin Okunması.
-print('Arttırılmış Katsayılar Matrisinin Katsayılarını Girin [Agumented Matrix]:')
+# Reading augmented matrix coefficients
+print('Enter Augmented Matrix Coefficients:')
 for i in range(n):
     for j in range(n+1):
         a[i][j] = float(input( 'M['+str(i)+']['+ str(j)+']='))
 
-# Girilen matrisi ekrana yazdırma.
+# Printing the entered matrix.
 print("\n")
 print(a)
 
-# Gauss Yok Etme Metodu Uygulaması
+# Applying Gauss Elimination
 for i in range(n):
     if a[i][i] == 0.0:
-        sys.exit('Sıfıra Bölme Algılandı!')
+        sys.exit('Divide by zero detected!')
         
     for j in range(i+1, n):
         ratio = a[j][i]/a[i][i]
@@ -37,7 +37,7 @@ for i in range(n):
             a[j][k] = a[j][k] - ratio * a[i][k]
 
 
-# Yerine koyma
+# Back Substitution
 x[n-1] = a[n-1][n]/a[n-1][n-1]
 
 for i in range(n-2,-1,-1):
@@ -48,7 +48,7 @@ for i in range(n-2,-1,-1):
     
     x[i] = x[i]/a[i][i]
 
-# Sonuçları ekrana yazdırma
+# Displaying solution
 print('\nRequired solution is: ')
 for i in range(n):
     print('X%d = %0.2f' %(i,x[i]), end = '\t')
