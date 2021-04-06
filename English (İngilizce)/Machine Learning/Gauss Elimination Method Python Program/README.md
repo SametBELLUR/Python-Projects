@@ -1,6 +1,3 @@
-# Roll Dice APP
-A basic dice rolling Android App.
-<div>
-<img src="https://github.com/SametBELLUR/Roll-Dice_APP/blob/master/img_README.md/1.png" width="40%">
-<img src="https://github.com/SametBELLUR/Roll-Dice_APP/blob/master/img_README.md/2.png" width="40%">
-</div>
+# Example Solution
+
+<img src="https://raw.githubusercontent.com/SametBELLUR/Python-Projects/main/English%20(%C4%B0ngilizce)/Machine%20Learning/Gauss%20Elimination%20Method%20Python%20Program/Example%20Solution/Example_Solution(For%20Readme.md).png">
