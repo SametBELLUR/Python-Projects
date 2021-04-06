@@ -31,10 +31,10 @@ for i in range(n):
         sys.exit('Sıfıra Bölme Algılandı!')
         
     for j in range(i+1, n):
-        ratio = a[j][i]/a[i][i]
+        oran = a[j][i]/a[i][i]
         
         for k in range(n+1):
-            a[j][k] = a[j][k] - ratio * a[i][k]
+            a[j][k] = a[j][k] - oran * a[i][k]
 
 
 # Yerine koyma
