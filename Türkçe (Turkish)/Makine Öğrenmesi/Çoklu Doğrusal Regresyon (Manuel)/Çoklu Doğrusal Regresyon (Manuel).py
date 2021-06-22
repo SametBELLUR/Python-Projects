@@ -115,15 +115,6 @@ def fonk_test (x1_test,x2_test,y_test,beta):
     
     print ("\nr2 Score: ",r2_score(y_test,tahmin))
     
-    """
-    y2 = DataFrame (y_test)
-    thm = DataFrame (tahmin)
-    RSS = sum((y2 - thm)**2)
-    TSS = sum((y2 - np.mean(y2))**2)
-    R2 = 1 - (RSS/TSS)
-    print(R2)
-    """
-    
 def main ():
     x1= [3,2,4,2,3,2,5,4]
     x2= [2,1,3,1,2,2,3,2]
